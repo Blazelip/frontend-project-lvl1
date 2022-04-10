@@ -1,5 +1,5 @@
 # Name of workflow
-name: Node CI
+name: Launch tests
 
 # Trigger the workflow on push or pull request
 on:
@@ -10,11 +10,9 @@ env:
   CI: true
 
 jobs:
-  test:
-
-    # The type of machine to run the job on
+  launch ESLint:
     runs-on: ubuntu-latest
 
     steps:
-      - name: launch ESLint
-        run: make lint
+      - run: make install
+      - run: make lint
