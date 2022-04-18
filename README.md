@@ -5,22 +5,51 @@
 
 ![Linter Status](https://github.com/Blazelip/frontend-project-lvl1/actions/workflows/actions-demo.yml/badge.svg)
 
-**brain-even**
+### Brain games - cli math mini games
+
+--- 
+
+### Install
+
+`make install`
+
+---
+
+### Setup
+
+`npm link`
+
+---
+
+### Run games
+
+```
+$ brain-even
+$ brain-calc
+$ brain-gcd
+$ brain-progression
+$ brain-prime
+```
+---
+
+### Examples:
+
+#### brain-even
 
 [![asciicast](https://asciinema.org/a/ltjn1wcHKoAlMmYNytcsTC6Nw.svg)](https://asciinema.org/a/ltjn1wcHKoAlMmYNytcsTC6Nw)
 
-**brain-calc**
+#### brain-calc
 
 [![asciicast](https://asciinema.org/a/u3q64gypm8rIFaykvpeJtlFV6.svg)](https://asciinema.org/a/u3q64gypm8rIFaykvpeJtlFV6)
 
-**brain-gcd**
+#### brain-gcd
 
 [![asciicast](https://asciinema.org/a/JTdmROon8fIYOougDBeiACE9F.svg)](https://asciinema.org/a/JTdmROon8fIYOougDBeiACE9F)
 
-**brain-progression**
+#### brain-progression
 
 [![asciicast](https://asciinema.org/a/GaVWjv5OwWFglHKR5q8FS45K8.svg)](https://asciinema.org/a/GaVWjv5OwWFglHKR5q8FS45K8)
 
-**brain-prime**
+#### brain-prime
 
 [![asciicast](https://asciinema.org/a/sRByjP7N3hlSUBK91EQoOXAPY.svg)](https://asciinema.org/a/sRByjP7N3hlSUBK91EQoOXAPY)
