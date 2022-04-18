@@ -16,7 +16,7 @@ const generateConditions = () => {
   const operand2 = Utils.getRangedRandomInteger(0, 100);
 
   return {
-    question: `${operand1} and ${operand2}`,
+    question: `${operand1} ${operand2}`,
     correctAnswer: String(findGcd(operand1, operand2)),
   };
 };
