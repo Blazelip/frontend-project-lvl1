@@ -16,28 +16,20 @@ const makeProgression = (start, step, length) => {
   return result;
 };
 
-const hideArrayItem = (array) => {
-  const hiddenIndex = Utils.getRangedRandomInteger(0, array.length - 1);
-  const answer = array[hiddenIndex];
-  array.splice(hiddenIndex, 1, '..');
-
-  return {
-    answer,
-    array,
-  };
-};
-
 const generateConditions = () => {
   const progressionStart = Utils.getRangedRandomInteger(0, 100);
   const progressionStep = Utils.getRangedRandomInteger(0, 10);
   const itemsQuantity = Utils.getRangedRandomInteger(MIN_PROGRESSION_ITEMS, MAX_PROGRESSION_ITEMS);
 
   const progression = makeProgression(progressionStart, progressionStep, itemsQuantity);
-  const { answer, array } = hideArrayItem(progression);
+  const hiddenIndex = Utils.getRangedRandomInteger(0, progression.length - 1);
+
+  const modifiedProgression = [...progression.slice(0, hiddenIndex), '..', ...progression.slice(hiddenIndex + 1)].join(' ');
+  const answer = String(progression[hiddenIndex]);
 
   return {
-    question: array.join(' '),
-    correctAnswer: String(answer),
+    question: modifiedProgression,
+    correctAnswer: answer,
   };
 };
 
