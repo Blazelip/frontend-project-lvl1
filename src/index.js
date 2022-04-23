@@ -9,7 +9,7 @@ export default (rules, conditions) => {
   console.log(rules);
 
   for (let i = 1; i <= ROUNDS_NUMBER; i += 1) {
-    const { question, correctAnswer } = conditions();
+    const [question, correctAnswer] = conditions();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
 
@@ -18,9 +18,7 @@ export default (rules, conditions) => {
       return;
     }
 
-    if (answer === correctAnswer) {
-      console.log('Correct!');
-    }
+    console.log('Correct!');
   }
 
   console.log(`Congratulations, ${name}!`);

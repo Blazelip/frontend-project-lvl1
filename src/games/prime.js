@@ -20,12 +20,11 @@ const isPrime = (number) => {
 
 const generateConditions = () => {
   const number = Utils.getRangedRandomInteger(0, NUMBER_LIMIT);
+
+  const question = number;
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
 
-  return {
-    question: number,
-    correctAnswer,
-  };
+  return [question, correctAnswer];
 };
 
 export default () => {

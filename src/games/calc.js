@@ -23,10 +23,10 @@ const generateConditions = () => {
   const operand2 = Utils.getRangedRandomInteger(0, 100);
   const mathSign = Utils.getRandomArrayItem(MATH_SIGNS);
 
-  return {
-    question: `${operand1} ${mathSign} ${operand2}`,
-    correctAnswer: String(calcExpression(operand1, operand2, mathSign)),
-  };
+  const question = `${operand1} ${mathSign} ${operand2}`;
+  const correctAnswer = String(calcExpression(operand1, operand2, mathSign));
+
+  return [question, correctAnswer];
 };
 
 export default () => {

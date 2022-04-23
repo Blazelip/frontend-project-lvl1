@@ -7,12 +7,11 @@ const isNumberEven = (number) => number % 2 === 0;
 
 const generateConditions = () => {
   const number = Utils.getRandomInteger();
+
+  const question = number;
   const correctAnswer = isNumberEven(number) ? 'yes' : 'no';
 
-  return {
-    question: number,
-    correctAnswer,
-  };
+  return [question, correctAnswer];
 };
 
 export default () => {
